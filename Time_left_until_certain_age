@@ -1,0 +1,15 @@
+# Tells a person how long is left until a certain age
+print("This will tell you how many days, weeks, and months are left until age 90.\n")
+age = int(input("Current age: "))
+
+# Choose an age to go off of (90 years old in example)
+years_remaining = 90 - age
+# 365 days in a year without leap year
+days_remaining = years_remaining * 365
+# 52 weeks in a year
+weeks_remaining = years_remaining * 52
+# 12 months in a year
+months_remaining = years_remaining * 12
+# Print with an f-string
+print(f"\nIf you are age {age}, you have {days_remaining} days, {weeks_remaining} weeks, and {months_remaining} months left until age 90.")
+# If you are 35 years old, you have 20075 days, 2860 weeks, and 660 months left until age 90.
