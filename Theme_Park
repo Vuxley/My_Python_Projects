@@ -1,0 +1,14 @@
+print('Welcome to the theme park!\n')
+height = int(input('What is your height in inches? '))
+# height in inches
+if height >= 47:
+  print('\nYou are tall enough to enter\n')
+  age = int(input('What is your age? '))
+  if age >= 12 and age <= 18:
+    print('\nPlease pay $7.\n')
+  elif height >= 47 and age < 12:
+    print('You may enter and please pay $5.\n')
+  else:
+    print('\nPlease pay $12.\n')
+else:
+  print('You may not enter')
