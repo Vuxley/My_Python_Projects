@@ -1,0 +1,20 @@
+print("Body Mass Index (BMI) Calculator\n")
+print("BMI Chart")
+print("Underweight: below 18.5\nNormal Weight: 18.5 - 24.9\nOverweight: 25 - 29.9\nObese: 30 - 35\nClinically Obese: above 35\n")
+
+# Height in inches
+height = float(input("Enter your height in inches: "))
+# Weight in pounds (lbs)
+weight = float(input("\nEnter your weight in lbs: "))
+bmi_index = round(weight / (height ** 2) * 703, 2)
+
+if bmi_index < 18.5:
+  print(f"\nYour BMI is {bmi_index}, you are underweight.")
+elif bmi_index < 25:
+  print(f"\nYour BMI is {bmi_index}, you have a normal weight.")
+elif bmi_index < 30:
+  print(f"\nYour BMI is {bmi_index}, you are overweight.")
+elif bmi_index < 35:
+  print(f"\nYour BMI is {bmi_index}, you are obese.")
+elif bmi_index > 35:
+  print(f"\nYour BMI is {bmi_index}, you are clinically obese.")
