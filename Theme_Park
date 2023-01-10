@@ -1,10 +1,10 @@
 print('Welcome to the theme park!\n')
-print('You have to be at least 47 inches to enter.\n')
+print('You have to be at least 47 inches to get on rides.\n')
 height = int(input('What is your height in inches? '))
 bill = 0
-# height in inches
+# Person needs to be at least 47 inches tall
 if height >= 47:
-  print('\nYou are tall enough to enter\n')
+  print('\nYou are tall enough to ride!\n')
   age = int(input('What is your age? '))
   if age < 12:
     # bill = $5 if under age 12
@@ -14,18 +14,22 @@ if height >= 47:
     # bill = $7 if age 12-17
     bill = 7
     print('\nYouth tickets are $7.\n')
-  if age > 18:
-    # bill = $12 if over age 18
+  # Over age 18, but not aged 45-55
+  if age > 18 and age <= 44 or age >= 56:
+    # bill = $12 if over age 18, but not aged 45-55
     bill = 12
-    print('\nAdult tickets are $12.\n')
+    print('\nAdult tickets are $12\n')
+  #Ages 45-55 get in for free
+  if age >= 45 and age <= 55:
+    print('\nTickets are free!\n')
   
   # Asking if the person wants a photo taken
   wants_photo = input('Would you like a photo taken for $3? Y or N ').upper()
   if wants_photo == 'Y':
     # Add $3 to bill
     bill += 3
-    print(f'\nYour total is ${bill}')
+    print(f'\nYour total bill is ${bill}')
   else:
-    print(f'\nYour total is ${bill}')
+    print(f'\nYour total bill is ${bill}')
 else:
-  print('\nYou may not enter')
+  print('\nYou may not get on rides.')
