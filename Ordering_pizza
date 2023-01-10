@@ -1,0 +1,28 @@
+# Pizza Company
+print('Welcome to Python Pizza Delivery!\n')
+print("""Menu
+Small pizza $15\nMedium pizza $20\nLarge pizza $25
+Extra pepperoni for Small size $2, Medium or Large $3
+Extra cheese $1\n""")
+
+pizza_size = input('What size pizza would you like? S, M, or L: ').upper()
+add_pepperoni = input('\nWould you like to add extra pepperoni? Y or N: ').upper()
+extra_cheese = input('\nWould you like to add extra cheese? Y or N: ').upper()
+bill = 0
+
+if pizza_size == "S":
+  bill += 15
+elif pizza_size == "M":
+  bill += 20
+else:
+  bill += 25
+
+if add_pepperoni == "Y":
+  if pizza_size == "S":
+    bill += 2
+  else:
+    bill += 3
+if extra_cheese == "Y":
+  bill += 1
+
+print(f"\nYour final bill is: ${bill}.")
