@@ -1,0 +1,35 @@
+print("Hide your treasue on this 3 x 3 square.\n")
+
+print("    1     2     3 ")
+row1 = ["1⬜️","️⬜️","️⬜️"]
+row2 = ["2⬜️","⬜️","️⬜️"]
+row3 = ["3⬜️️","⬜️️","⬜️️"]
+map = [row1, row2, row3]
+print(f"{row1}\n{row2}\n{row3}\n")
+
+print("Type a two-digit number that corresponds with the map. Example (11, 22, 33, 12, 21, 32...)\n")
+position = input("Where do you want to put the treasure? ")
+
+hori_axis = int(position[0])   # first digit of user's input
+vert_axis = int(position[1])   # second digit of user's input
+map[vert_axis-1][hori_axis-1] = "X"    # takes away 1 index since it starts at 0 on lists
+
+print("\n    1     2     3 ")
+print(f"{row1}\n{row2}\n{row3}\n")
+print(f"You have selected: row {position[0]}, column {position[1]}.")
+
+
+
+
+################## OUTPUT ##################
+
+Type a two-digit number that corresponds with the map. Example (11, 22, 33, 12, 21, 32...)
+
+Where do you want to put the treasure? 23
+
+    1     2     3 
+['1⬜️', '️⬜️', '️⬜️']
+['2⬜️', '⬜️', '️⬜️']
+['3⬜️️', 'X', '⬜️️']
+
+You have selected: row 2, column 3.
