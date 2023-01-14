@@ -3,24 +3,7 @@ from random import *
 names_string = input("Give me everybody's names, seperated by a comma. ")
 names = names_string.split(", ")
 
+num_items = len(names)
 random_choice = randint(0, num_items - 1)
 paying_bill = names[random_choice]
 print(paying_bill)
-
-
-
-OR
-
-
-
-from random import *
-
-names_string = input("Give me everybody's names, seperated by a comma. ")
-names = names_string.split(", ")
-# chooses 1 name from the list at random
-for i in range(1):
-  print(choice(names))
-
-
-
-
