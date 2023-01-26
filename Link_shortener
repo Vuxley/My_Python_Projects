@@ -1,0 +1,8 @@
+import pyshorteners
+# Have user enter a link
+long_link = input("\nEnter your link: ")
+# Convert into tinyurl
+short_link = pyshorteners.Shortener()
+final_link = short_link.tinyurl.short(long_link)
+# Outcome
+print("\nYour shortened link is: " + final_link)
