@@ -1,0 +1,56 @@
+# Inheritance #
+
+# Login/Logout
+class User:
+    def sign_in(self):
+        print('Logged in')
+
+    def sign_out(self):
+        print('Logged out')
+
+# Wizard class
+class Wizard(User):
+    def __init__(self, name, spell_power):
+        self.name = name
+        self.spell_power = spell_power
+
+    def attack(self):
+        print(f'{self.name} is attacking with spell power of {self.spell_power}')
+
+# Hunter class
+class Hunter(User):
+    def __init__(self, name, num_arrows):
+        self.name = name
+        self.num_arrows = num_arrows
+
+    def attack(self):
+        print(f'{self.name} is attacking with gold tipped arrows.\nArrows remaining: {self.num_arrows}')
+
+# Warrior class
+class Warrior(User):
+    def __init__(self, name, rage_power):
+        self.name = name
+        self.rage_power = rage_power
+
+    def attack(self):
+        print(f'{self.name} is attacking with rage power of {self.rage_power}')
+
+# Rogue class
+class Rogue(User):
+    def __init__(self, name, sneak_power):
+        self.name = name
+        self.sneak_power = sneak_power
+
+    def attack(self):
+        print(f'{self.name} is attacking with sneak attack power of {self.sneak_power}')
+
+
+wizard1 = Wizard('Merlin', 50)
+hunter1 = Hunter('Legolas', 99)
+warrior1 = Warrior('Linley', 100)
+rogue1 = Rogue('Ghost', 110)
+
+wizard1.attack()      # Merlin is attacking with spell power of 50
+hunter1.attack()      # Legolas is attacking with gold tipped arrows. Arrows remaining: 99
+warrior1.attack()     # Linley is attacking with rage power of 100
+rogue1.attack()       # Ghost is attacking with sneak attack power of 110
